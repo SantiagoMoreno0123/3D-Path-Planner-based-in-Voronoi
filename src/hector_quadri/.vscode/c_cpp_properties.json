@@ -1,0 +1,42 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/jim/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/jim/catkin_ws/src/diffbot/diffbot_base/include/**",
+        "/home/jim/catkin_ws/src/mobilerobots_pkg/gazebo_simulation_pkg/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_gazebo/hector_gazebo_plugins/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_gazebo/hector_gazebo_thermal_camera/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_slam/hector_geotiff/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_slam/hector_map_tools/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_slam/hector_mapping/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_slam/hector_marker_drawing/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_localization/hector_pose_estimation/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_localization/hector_pose_estimation_core/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_quadrotor_actions/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_quadrotor_controller_gazebo/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_quadrotor_interface/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_quadrotor_model/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_quadrotor_pose_estimation/include/**",
+        "/home/jim/catkin_ws/src/hector_quadri/hector_quadrotor/hector_uav_msgs/include/**",
+        "/home/jim/catkin_ws/src/pratica4/include/**",
+        "/home/jim/catkin_ws/src/mobilerobots_pkg/robot_description_pkg/include/**",
+        "/home/jim/catkin_ws/src/mobilerobots_pkg/slam_pkg/include/**",
+        "/home/jim/catkin_ws/src/Multi-Robot-Gazebo-NaviStack/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

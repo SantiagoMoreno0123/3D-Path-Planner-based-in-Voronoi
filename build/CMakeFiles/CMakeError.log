@@ -1,0 +1,154 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a6d86/fast && /usr/bin/make -f CMakeFiles/cmTC_a6d86.dir/build.make CMakeFiles/cmTC_a6d86.dir/build
+make[1]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6d86.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a6d86.dir/src.c.o   -c /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a6d86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6d86.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_a6d86.dir/src.c.o  -o cmTC_a6d86 
+/usr/bin/ld: CMakeFiles/cmTC_a6d86.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a6d86.dir/build.make:87: cmTC_a6d86] Error 1
+make[1]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a6d86/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ca768/fast && /usr/bin/make -f CMakeFiles/cmTC_ca768.dir/build.make CMakeFiles/cmTC_ca768.dir/build
+make[1]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca768.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ca768.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ca768
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca768.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ca768.dir/CheckFunctionExists.c.o  -o cmTC_ca768  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ca768.dir/build.make:87: cmTC_ca768] Error 1
+make[1]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ca768/fast] Error 2
+
+
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_19280/fast && make[1]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_19280.dir/build.make CMakeFiles/cmTC_19280.dir/build
+make[2]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_19280.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_19280.dir/CheckSymbolExists.cxx.o -c /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+    8 |   return ((int*)(&Q_WS_WIN))[argc];
+      |                   ^~~~~~~~
+make[2]: *** [CMakeFiles/cmTC_19280.dir/build.make:66: CMakeFiles/cmTC_19280.dir/CheckSymbolExists.cxx.o] Error 1
+make[2]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_19280/fast] Error 2
+make[1]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+
+
+File /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_593ee/fast && make[1]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_593ee.dir/build.make CMakeFiles/cmTC_593ee.dir/build
+make[2]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_593ee.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_593ee.dir/CheckSymbolExists.cxx.o -c /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+    8 |   return ((int*)(&Q_WS_QWS))[argc];
+      |                   ^~~~~~~~
+make[2]: *** [CMakeFiles/cmTC_593ee.dir/build.make:66: CMakeFiles/cmTC_593ee.dir/CheckSymbolExists.cxx.o] Error 1
+make[2]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_593ee/fast] Error 2
+make[1]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+
+
+File /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9072a/fast && make[1]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9072a.dir/build.make CMakeFiles/cmTC_9072a.dir/build
+make[2]: Entering directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9072a.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_9072a.dir/CheckSymbolExists.cxx.o -c /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+    8 |   return ((int*)(&Q_WS_MAC))[argc];
+      |                   ^~~~~~~~
+make[2]: *** [CMakeFiles/cmTC_9072a.dir/build.make:66: CMakeFiles/cmTC_9072a.dir/CheckSymbolExists.cxx.o] Error 1
+make[2]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+make[1]: *** [Makefile:121: cmTC_9072a/fast] Error 2
+make[1]: Leaving directory '/home/dom/catkin_ws/build/CMakeFiles/CMakeTmp'
+
+
+File /home/dom/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
